@@ -1,2 +1,2 @@
-# QuizXAng
-Currently shelved while Quick.JS is in development.
+# QuizX with Quick.JS
+Currently holding while Quick.JS is in development.
