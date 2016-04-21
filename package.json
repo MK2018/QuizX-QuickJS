@@ -1,0 +1,17 @@
+{
+  "name": "QuizX",
+  "version": "0.0.1",
+  "author": "Michael Krause <mkrause6274@yahoo.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MK2018/QuizX-QuickJS"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "ws": "1.1.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "license": "MIT"
+}
