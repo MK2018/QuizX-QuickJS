@@ -11,16 +11,6 @@
 		<par id="logging">
 		</par>
 		<script src="/socket.io/socket.io.js"></script>
-		<script>
-			function log(toAdd){
-				document.getElementById("logging").innerHTML += toAdd;
-			}
-			var socket = io.connect();
-		  	socket.on('news', function (data) {
-		  		//log(data);
-		    	console.log(data);
-		    	socket.emit('my other event', { my: 'data' });
-		  	});
-		</script>
+		<script src="./quizx.js"></script>
 	</body>
 </html>
