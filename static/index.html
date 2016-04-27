@@ -3,14 +3,37 @@
 	<head>
 		<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/quickjs/latest/quick.min.css">
 	</head>
 	<body>
-		<h1>
-			QuickJS + Socket.IO + QuizX. Coming soon.
-		</h1>
-		<par id="logging">
-		</par>
+		<qk-page qk-pageid="home">
+			<h1>
+				QuickJS + Socket.IO + QuizX. Coming soon.
+			</h1>
+			<par id="logging">
+			</par>
+		</qk-page>
+		<qk-page qk-pageid="lobby">
+			<h1>
+				Welcome to QuizX.
+			</h1>
+			<par id="logging">
+			</par>
+		</qk-page>
+		<qk-page qk-pageid="joined">
+			<h1>
+				You've joined room [[data.roomid]].
+			</h1>
+			<par id="logging">
+			</par>
+		</qk-page>
 		<script src="/socket.io/socket.io.js"></script>
 		<script src="./quizx.js"></script>
+		<script src="https://cdn.jsdelivr.net/quickjs/latest/quick.min.js"></script>
+		<script>
+        	qk.go({
+            	home: "home",
+        	});
+        </script>
 	</body>
 </html>
