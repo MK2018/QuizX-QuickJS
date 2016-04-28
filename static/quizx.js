@@ -1,14 +1,32 @@
-var quizx = {
-	log: function(toAdd){
-		document.getElementById("logging").innerHTML += toAdd;
-	},
+var quizx = new function(){
+	
 	var socket = io.connect();
+
 	socket.on('init', function (data) {
-		//log(data);
-		console.log(data);
-		socket.emit('my other event', { my: 'data' });
+		gameData.id = data.id;
+		socket.emit('init_recieved', { id: gameData.id });
+		//testStuff.test1();
+	});
+
+	var testStuff = new function(){
+		
+		this.test1 = function(){
+			console.log(gameData.clientId());
+		}
+
+	};
+
+	var gameData = new function(){
+
+		this.id = -1;
+
+		this.clientId = function(){
+			return this.id;
+		}
+
+	};
+
+	document.getElementById("connect_room_button").addEventListener("click", function(){
+	    socket.emit('join_room', 'something');
 	});
 };
-
-
-//OR SOMETHING LIKE THAT
