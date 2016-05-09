@@ -8,6 +8,10 @@ var quizx = new function(){
 		//testStuff.test1();
 	});
 
+	socket.on('room_joined', function(data){
+		console.log(data);
+	});
+
 	var testStuff = new function(){
 		
 		this.test1 = function(){
@@ -19,6 +23,8 @@ var quizx = new function(){
 	var gameData = new function(){
 
 		this.id = -1;
+
+		this.room = -1;
 
 		this.clientId = function(){
 			return this.id;
