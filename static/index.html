@@ -15,6 +15,11 @@
 		<qk-page qk-pageid="lobby">
 			<h1>
 				Welcome to QuizX's Lobby.
+
+				Choose a room below:
+				[[datatools.forloop]]{
+					[[datatools.for.lobbyname]]
+				}
 			</h1>
 			<button class="button" id="connect_room_button"><span>Connect</span></button>
 		</qk-page>
