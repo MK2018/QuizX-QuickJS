@@ -21,7 +21,7 @@
 					[[datatools.for.lobbyname]]
 				}
 			</h1>
-			<button class="button" id="connect_room_button"><span>Connect</span></button>
+			<button class="button" id="connect_room_button"><span>Connect to room</span></button>
 		</qk-page>
 		<qk-page qk-pageid="joined">
 			<h1>
@@ -29,6 +29,13 @@
 			</h1>
 			<par id="logging">
 			</par>
+		</qk-page>
+		<qk-page qk-pageid="board">
+			<div class="board">
+			</div>
+			<div class="scores">
+			</div>
+			<button class="button" id="connect_room_button"><span>Connect to room</span></button>
 		</qk-page>
 		<script src="/socket.io/socket.io.js"></script>
 		<script src="./quizx.js"></script>
